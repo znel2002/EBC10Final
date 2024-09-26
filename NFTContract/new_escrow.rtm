@@ -1,0 +1,32 @@
+# CALL_FUNCTION Address("package_sim1pk3cmat8st4ja2ms8mjqy2e9ptk8y6cx40v4qnfrkgnxcp2krkpr92") "Hello" "new";
+
+CALL_METHOD Address("${account}")
+"lock_fee"
+Decimal("10");
+
+
+CALL_METHOD
+    Address("${account}")
+    "withdraw"
+    Address("${xrd}")
+    Decimal("100");
+
+TAKE_FROM_WORKTOP
+    Address("${xrd}")
+    Decimal("100")
+    Bucket("my_bucket");
+
+
+
+
+CALL_METHOD Address("${component}")
+"new_escrow"
+Bucket("my_bucket");
+
+
+
+# Because we withdrew tokens from our account and they are still on the
+# worktop, we have to deposit them back into your account
+CALL_METHOD Address("${account}")
+  "deposit_batch"
+  Expression("ENTIRE_WORKTOP");

@@ -1,0 +1,28 @@
+
+CALL_METHOD Address("${account}")
+"lock_fee"
+Decimal("10");
+
+CALL_METHOD
+    Address("${account}")
+    "withdraw"
+    Address("${xrd}")
+    Decimal("100");
+
+
+
+CALL_METHOD Address("${account}")
+"create_proof_of_amount"
+Address("${adminToken}")
+Decimal("1");
+
+POP_FROM_AUTH_ZONE Proof("AdminToken");
+
+CALL_METHOD Address("${component}")
+"approve_payout"
+NonFungibleLocalId("#1#")
+Proof("AdminToken");
+
+CALL_METHOD Address("${account}")
+  "deposit_batch"
+  Expression("ENTIRE_WORKTOP");

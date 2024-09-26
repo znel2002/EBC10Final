@@ -1,0 +1,24 @@
+
+# CALL_METHOD Address("${account}")
+# "lock_fee"
+# Decimal("10");
+
+
+CALL_METHOD
+    Address("${account}")
+    "withdraw_non_fungibles"
+    Address("${claim_nft}")
+    Array<NonFungibleLocalId>(NonFungibleLocalId("#1#"));
+
+TAKE_ALL_FROM_WORKTOP 
+Address("${claim_nft}")
+Bucket("claim_bucket");
+
+
+CALL_METHOD Address("${component}")
+"withdraw_money"
+Bucket("claim_bucket");
+
+CALL_METHOD Address("${account}")
+  "deposit_batch"
+  Expression("ENTIRE_WORKTOP");

@@ -1,0 +1,12 @@
+Account component address: account_sim1c956qr3kxlgypxwst89j9yf24tjc7zxd4up38x37zr6q4jxdx9rhma
+Public key: 030605f98086f64f351cf05eab8d70eef7e1c97478dfa2404dc9c15b748617cc24
+Private key: b2bfb5c0303d0bfc8f078fd032ff7dc6406e2aaea0504f416a5a58ad89ee6ca6
+Owner badge: resource_sim1nfzf2h73frult99zd060vfcml5kncq3mxpthusm9lkglvhsr0guahy:#1#
+
+
+Your package was submitted! 🎉
+Transaction ID: txid_tdx_2_1tjwtru7cj2lrk8u47rydf7le7k74mrufd927qkw9zzrwhk8lsjcqdey7g7
+Package address: package_tdx_2_1p5shudxugyqct59ntdj9rujdcmpx6gpg5ec9kkwkxaqvju55dj0mae
+
+
+COMPONENT
